@@ -52,7 +52,6 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-black"
         android:text="https://androidwave.com/dagger2-android-example/"
-        android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,9 +66,8 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-black"
         android:text="https://androidwave.com/dagger2-android-example/"
-        android:textColor="@color/iconDisableColor"
         android:textSize="15sp"
-        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDescription" />

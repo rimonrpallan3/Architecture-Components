@@ -106,15 +106,15 @@ public class MovieListAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             }
 
             if (mResult.getDirector() != null) {
-                tvDirector.setText(mResult.getDirector());
+                tvDirector.setText("Director : "+mResult.getDirector());
             }
 
             if (mResult.getProducer() != null) {
-                tvProducer.setText(mResult.getProducer());
+                tvProducer.setText("Producer : "+mResult.getProducer());
             }
 
             if (mResult.getRelease_date() != null) {
-                tvReleaseDate.setText(mResult.getRelease_date());
+                tvReleaseDate.setText("ReleaseDate : "+mResult.getRelease_date());
             }
 
             clMovieItem.setOnClickListener(v -> {
