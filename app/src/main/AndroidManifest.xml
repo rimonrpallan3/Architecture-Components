@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.TestMovieList.MProfileActivity"></activity>
+        <activity android:name=".activity.TestMovieList.MProfileActivity"
+            android:parentActivityName=".activity.TestMovieList.MovieActivity"/>
         <activity android:name=".activity.Main.Main2Activity" /> <!-- <activity android:name=".activity.Main.Main2Activity"></activity> -->
         <activity android:name=".activity.Bloger.BlogerActivity" />
         <activity android:name=".MainActivity" />

@@ -1,5 +1,6 @@
 package com.voyager.architecturecomponents.activity.TestMovieList;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -26,6 +27,9 @@ public class MProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mprofile);
 
+        ActionBar actionBar = getSupportActionBar();
+
+
         ivThumbnail = findViewById(R.id.ivThumbnail);
         tvTitle = findViewById(R.id.tvTitle);
         tvDescription = findViewById(R.id.tvDescription);
@@ -39,6 +43,7 @@ public class MProfileActivity extends AppCompatActivity {
             System.out.println("MProfileActivity -- Results- producer : " + results.getProducer());
             System.out.println("MProfileActivity -- Results- director : " + results.getDirector());
             System.out.println("MProfileActivity -- Results- release date : " + results.getRelease_date());
+            actionBar.setTitle(results.getTitle());
             Glide.with(this)
                     .load(R.drawable.ic_local_movies)
                     .into(ivThumbnail);
