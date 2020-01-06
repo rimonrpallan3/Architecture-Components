@@ -15,7 +15,7 @@ public interface  RestApiService {
 
     @GET("feed.json")
     Call<BlogWrapper> getPopularBlog();
-    @GET("feed.json")
+    @GET("films/")
     Call<MovieListsWrapper> getMovieList();
     @GET("locations/10/0")
     Call<ArrayList<TestList>> getTestList();

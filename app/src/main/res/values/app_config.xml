@@ -8,10 +8,10 @@
     <!--Set Your Application version -->
     <string name="app_version">1.0</string>
     <!-- BASE API URL (PLASE SET  LIKE THIS http://domain.com) -->
-    <string name="BASE_URL">http://barastiapp.betaholder.com/api/</string>
+    <string name="BASE_URL">https://swapi.co/api/</string>
 
     <!-- DEFAULT HOST -->
-    <string name="DEFAULT_HOST">www.barastiapp.betaholder.com</string>
+    <string name="DEFAULT_HOST">www.swapi.co</string>
 
 
     <!-- APP DESIGN -->

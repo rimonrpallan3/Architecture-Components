@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class MovieActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
-    SwipeRefreshLayout swipeRefresh;
+    SwipeRefreshLayout srlMovieList;
     private MovieListViewModel movieListViewModel;
 
     MovieListAdapter mMovieListAdapter;
@@ -40,24 +40,24 @@ public class MovieActivity extends AppCompatActivity {
         movieListViewModel = new ViewModelProvider(this).get(MovieListViewModel.class);
         getTestList();
         // lambda expression
-        swipeRefresh.setOnRefreshListener(() -> {
+        srlMovieList.setOnRefreshListener(() -> {
             getTestList();
         });
     }
 
     public void getTestList() {
-        swipeRefresh.setRefreshing(true);
+        srlMovieList.setRefreshing(true);
         movieListViewModel.getAllMovieList().observe(this, new Observer<ArrayList<Results>>() {
             @Override
             public void onChanged(@Nullable ArrayList<Results> results) {
-                swipeRefresh.setRefreshing(false);
+                srlMovieList.setRefreshing(false);
                 prepareRecyclerView(results);
             }
         });
     }
 
     private void initializationViews() {
-        swipeRefresh = findViewById(R.id.swipeRefresh);
+        srlMovieList = findViewById(R.id.srlMovieList);
         mRecyclerView = findViewById(R.id.rvMovieList);
     }
 
