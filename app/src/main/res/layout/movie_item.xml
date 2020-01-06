@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="#fff"
+    android:padding="8dp"
+    android:id="@+id/clMovieItem"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/ivMovie"
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_local_movies"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="9:5"
+        app:layout_constraintStart_toEndOf="@id/ivMovie"
+        tools:text="Avengers"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivMovie"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieTitle"
+        tools:text="Director" />
+
+    <TextView
+        android:id="@+id/tvProducer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivMovie"
+        app:layout_constraintTop_toBottomOf="@id/tvDirector"
+        tools:text="Producer" />
+
+    <TextView
+        android:id="@+id/tvReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivMovie"
+        app:layout_constraintTop_toBottomOf="@id/tvProducer"
+        tools:text="Release Date: 16 Feb 2018" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,8 @@
-package com.voyager.architecturecomponents.activity.Bloger.model;
+package com.voyager.architecturecomponents.activity.TestMovieList.model;
 
 import java.util.ArrayList;
 
-public class MovieLists {
+public class MovieListsWrapper {
 
 
     /**

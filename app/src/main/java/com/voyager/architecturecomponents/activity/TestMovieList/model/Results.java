@@ -1,8 +1,11 @@
-package com.voyager.architecturecomponents.activity.Bloger.model;
+package com.voyager.architecturecomponents.activity.TestMovieList.model;
+
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.util.List;
 
-public class Results {
+public class Results implements Parcelable {
 
 
     /**
@@ -50,6 +53,7 @@ public class Results {
     private String release_date;
     private String created;
     private String edited;
+    private String imgUrl;
     private String url;
     private List<String> characters;
     private List<String> planets;
@@ -168,4 +172,70 @@ public class Results {
     public void setSpecies(List<String> species) {
         this.species = species;
     }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.title);
+        dest.writeInt(this.episode_id);
+        dest.writeString(this.opening_crawl);
+        dest.writeString(this.director);
+        dest.writeString(this.producer);
+        dest.writeString(this.release_date);
+        dest.writeString(this.created);
+        dest.writeString(this.edited);
+        dest.writeString(this.imgUrl);
+        dest.writeString(this.url);
+        dest.writeStringList(this.characters);
+        dest.writeStringList(this.planets);
+        dest.writeStringList(this.starships);
+        dest.writeStringList(this.vehicles);
+        dest.writeStringList(this.species);
+    }
+
+    public Results() {
+    }
+
+    protected Results(Parcel in) {
+        this.title = in.readString();
+        this.episode_id = in.readInt();
+        this.opening_crawl = in.readString();
+        this.director = in.readString();
+        this.producer = in.readString();
+        this.release_date = in.readString();
+        this.created = in.readString();
+        this.edited = in.readString();
+        this.imgUrl = in.readString();
+        this.url = in.readString();
+        this.characters = in.createStringArrayList();
+        this.planets = in.createStringArrayList();
+        this.starships = in.createStringArrayList();
+        this.vehicles = in.createStringArrayList();
+        this.species = in.createStringArrayList();
+    }
+
+    public static final Parcelable.Creator<Results> CREATOR = new Parcelable.Creator<Results>() {
+        @Override
+        public Results createFromParcel(Parcel source) {
+            return new Results(source);
+        }
+
+        @Override
+        public Results[] newArray(int size) {
+            return new Results[size];
+        }
+    };
 }

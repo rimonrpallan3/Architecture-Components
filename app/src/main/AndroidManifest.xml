@@ -12,13 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Main.Main2Activity"/>
-        <!-- <activity android:name=".activity.Main.Main2Activity"></activity> -->
+        <activity android:name=".activity.TestMovieList.MProfileActivity"></activity>
+        <activity android:name=".activity.Main.Main2Activity" /> <!-- <activity android:name=".activity.Main.Main2Activity"></activity> -->
         <activity android:name=".activity.Bloger.BlogerActivity" />
-
         <activity android:name=".MainActivity" />
         <activity android:name=".activity.Main.NewWordActivity" />
-        <activity android:name=".activity.ApiTestBarsti.TestApiActivity">
+        <activity android:name=".activity.TestMovieList.MovieActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
